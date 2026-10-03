@@ -4,7 +4,47 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Daniel Burkhalter</title>
-<meta name="description" content="Daniel Burkhalter: runner, data scientist and hobby developer in South Dakota. Apps including SD XC, Math Scribe and Bank Check.">
+<meta name="description" content="Daniel Burkhalter is a runner, data scientist, and self-taught developer from South Dakota. Hobby projects include SD XC cross country rankings, Math Scribe, Bank Check, and Dairy Translate.">
+<link rel="canonical" href="https://danielburkhalter.dev/">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Daniel Burkhalter">
+<meta property="og:description" content="Runner, data scientist, and self-taught developer from South Dakota. A compilation of my hobby projects.">
+<meta property="og:url" content="https://danielburkhalter.dev/">
+<meta property="og:image" content="https://danielburkhalter.dev/images/daniel.jpg">
+<meta property="og:image:alt" content="Daniel Burkhalter">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Daniel Burkhalter",
+  "url": "https://danielburkhalter.dev/",
+  "image": "https://danielburkhalter.dev/images/daniel.jpg",
+  "jobTitle": "Data Scientist",
+  "description": "Runner, data scientist, and self-taught developer from South Dakota.",
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "South Dakota State University"
+  },
+  "homeLocation": {
+    "@type": "Place",
+    "name": "South Dakota"
+  },
+  "knowsAbout": [
+    "Data science",
+    "Statistics",
+    "Credit risk modeling",
+    "Bioinformatics",
+    "Cross country",
+    "Track and field"
+  ],
+  "sameAs": [
+    "https://www.linkedin.com/in/daniel-burkhalter1/",
+    "https://github.com/dan-burk",
+    "https://gojacks.com/sports/mens-cross-country/roster/daniel-burkhalter/12446"
+  ]
+}
+</script>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2317171C'/%3E%3Ctext x='16' y='21' font-family='system-ui,sans-serif' font-size='13' font-weight='600' fill='white' text-anchor='middle'%3EDB%3C/text%3E%3C/svg%3E">
 <!-- Google Analytics, shared with every app; only the live site reports -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-3HK7FW9Y6N"></script>
@@ -103,7 +143,49 @@ footer{padding-top:24px;border-top:1px solid var(--line);font-size:13px;color:va
 
   <section aria-labelledby="apps-h">
     <h2 class="lbl" id="apps-h">Apps</h2>
-    <ul class="grid" id="grid"></ul>
+    <!-- To add an app: copy one <li> block, put its logo in images/logos/,
+         and add it to sitemap.xml and llms.txt if it lives on this domain. -->
+    <ul class="grid">
+      <li>
+        <div class="tile">
+          <div class="tile-top">
+            <img class="logo" src="images/logos/sdxc.png" alt="SD XC logo" width="64" height="64">
+            <span class="arrow" aria-hidden="true">↗</span>
+          </div>
+          <div><h3><a href="/sdxc/" target="_blank" rel="noopener">SD XC</a></h3><p>Course-adjusted cross country rankings for South Dakota high school athletes.</p></div>
+          <div class="extras"><a href="https://github.com/dan-burk/sdxc" target="_blank" rel="noopener">Source code ↗</a></div>
+        </div>
+      </li>
+      <li>
+        <div class="tile">
+          <div class="tile-top">
+            <img class="logo" src="images/logos/math-scribe.png" alt="Math Scribe logo" width="64" height="64">
+            <span class="arrow" aria-hidden="true">↗</span>
+          </div>
+          <div><h3><a href="https://math-scribe-3a4b6.web.app/" target="_blank" rel="noopener">Math Scribe</a></h3><p>An AI scribe that writes exactly what the student says. Built for 8th grade math.</p></div>
+          <div class="extras"><a href="https://github.com/dan-burk/vibe-code/tree/math-scribe" target="_blank" rel="noopener">Source code ↗</a></div>
+        </div>
+      </li>
+      <li>
+        <div class="tile">
+          <div class="tile-top">
+            <img class="logo" src="images/logos/bank-check.png" alt="Bank Check logo" width="64" height="64">
+            <span class="arrow" aria-hidden="true">↗</span>
+          </div>
+          <div><h3><a href="/bank-check/" target="_blank" rel="noopener">Bank Check</a></h3><p>See how your bank compares with peers and past failures. The app is large and slow to load, so please be patient.</p></div>
+          <div class="extras"><a href="https://danielburkhalter.shinyapps.io/bank-check/" target="_blank" rel="noopener">Mirror site ↗</a><a href="https://github.com/dan-burk/bank-check" target="_blank" rel="noopener">Source code ↗</a></div>
+        </div>
+      </li>
+      <li>
+        <div class="tile">
+          <div class="tile-top">
+            <img class="logo" src="images/logos/dairy-translate.png" alt="Dairy Translate logo" width="64" height="64">
+            <span class="arrow" aria-hidden="true">↗</span>
+          </div>
+          <div><h3><a href="https://dairytranslate.com/" target="_blank" rel="noopener">Dairy Translate</a></h3><p>Proof of concept for translating English to Dairy Comp 305 code.</p></div>
+        </div>
+      </li>
+    </ul>
   </section>
 
   <section class="about">
@@ -115,37 +197,5 @@ footer{padding-top:24px;border-top:1px solid var(--line);font-size:13px;color:va
   <footer>Last updated Oct 2026</footer>
 </main>
 
-<script>
-// Add a site by adding one object; put its logo in images/logos/.
-// `links` adds small links along the bottom of a tile, e.g. a mirror or source code.
-const PROJECTS = [
-  { name:"SD XC", logo:"images/logos/sdxc.png", url:"/sdxc/",
-    desc:"Course-adjusted cross country rankings for South Dakota high school athletes.",
-    links:[["Source code", "https://github.com/dan-burk/sdxc"]] },
-  { name:"Math Scribe", logo:"images/logos/math-scribe.png", url:"https://math-scribe-3a4b6.web.app/",
-    desc:"An AI scribe that writes exactly what the student says. Built for 8th grade math.",
-    links:[["Source code", "https://github.com/dan-burk/vibe-code/tree/math-scribe"]] },
-  { name:"Bank Check", logo:"images/logos/bank-check.png", url:"/bank-check/",
-    desc:"See how your bank compares with peers and past failures. The app is large and slow to load, so please be patient.",
-    links:[["Mirror site", "https://danielburkhalter.shinyapps.io/bank-check/"],
-           ["Source code", "https://github.com/dan-burk/bank-check"]] },
-  { name:"Dairy Translate", logo:"images/logos/dairy-translate.png", url:"https://dairytranslate.com/",
-    desc:"Proof of concept for translating English to Dairy Comp 305 code." },
-];
-
-const esc = s => s.replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
-document.getElementById("grid").innerHTML = PROJECTS.map(p => `
-  <li>
-    <div class="tile">
-      <div class="tile-top">
-        <img class="logo" src="${p.logo}" alt="" width="64" height="64">
-        <span class="arrow" aria-hidden="true">↗</span>
-      </div>
-      <div><h3><a href="${p.url}" target="_blank" rel="noopener">${esc(p.name)}</a></h3><p>${esc(p.desc)}</p></div>
-      ${p.links ? `<div class="extras">${p.links.map(([t, u]) =>
-        `<a href="${u}" target="_blank" rel="noopener">${esc(t)} ↗</a>`).join("")}</div>` : ""}
-    </div>
-  </li>`).join("");
-</script>
 </body>
 </html>

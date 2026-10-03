@@ -1,0 +1,17 @@
+# Daniel Burkhalter
+
+> Runner, data scientist, and self-taught developer from South Dakota. This site is a compilation of his free hobby projects.
+
+Daniel studied math, statistics, and data science at South Dakota State University (SDSU) and ran track and cross country there for six years. He started his career building credit risk models and is now exploring the bioinformatics startup life.
+
+## Apps
+
+- [SD XC](https://danielburkhalter.dev/sdxc/): Course-adjusted cross country rankings for South Dakota high school athletes, plus a race simulator for team scoring.
+- [Math Scribe](https://math-scribe-3a4b6.web.app/): An AI scribe that writes exactly what an 8th grade math student says, without tutoring.
+- [Bank Check](https://danielburkhalter.dev/bank-check/): Compares any FDIC-insured bank with its peers and with every US bank failure since 2000. Mirror: https://danielburkhalter.shinyapps.io/bank-check/
+- [Dairy Translate](https://dairytranslate.com/): Proof of concept for translating English to Dairy Comp 305 code.
+
+## Profiles
+
+- [GitHub](https://github.com/dan-burk)
+- [LinkedIn](https://www.linkedin.com/in/daniel-burkhalter1/)
