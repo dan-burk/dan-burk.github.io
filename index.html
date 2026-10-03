@@ -61,12 +61,13 @@ a:focus-visible{outline:2px solid var(--ink);outline-offset:3px;border-radius:8p
 .tile h3{margin:0;font:600 19px/1.25 var(--f-sans);letter-spacing:-.01em}
 .tile h3 a{text-decoration:none}
 .tile h3 a::after{content:"";position:absolute;inset:0;border-radius:inherit}
-.extra{position:relative;z-index:1;margin-top:auto;font-size:13px;color:var(--faint);text-underline-offset:3px}
-.extra:hover{color:var(--ink)}
+.extras{position:relative;z-index:1;margin-top:auto;display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 16px}
+.extras a{font-size:13px;color:var(--faint);text-underline-offset:3px}
+.extras a:only-child{margin-left:auto}
+.extras a:hover{color:var(--ink)}
 .tile p{margin:6px 0 0;color:var(--muted);font-size:15px;line-height:1.5}
 
 /* lists */
-.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.6fr);gap:48px}
 .list{list-style:none;margin:0;padding:0;display:grid;gap:10px}
 .list a{display:flex;justify-content:space-between;gap:12px;text-decoration:none;font-size:15px;padding-bottom:10px;border-bottom:1px solid var(--line)}
 .list a span{color:var(--faint);font-size:13px}
@@ -79,7 +80,6 @@ footer{padding-top:24px;border-top:1px solid var(--line);font-size:13px;color:va
   .wrap{padding-block:48px 32px;gap:48px}
   .grid{grid-template-columns:1fr}
   .tile{min-height:0}
-  .two{grid-template-columns:1fr;gap:40px}
   .tag{font-size:16.5px}
   .id h1{font-size:25px}
   .avatar{width:76px;height:76px}
@@ -106,37 +106,31 @@ footer{padding-top:24px;border-top:1px solid var(--line);font-size:13px;color:va
     <ul class="grid" id="grid"></ul>
   </section>
 
-  <div class="two">
-    <section>
-      <h2 class="lbl">Elsewhere</h2>
-      <ul class="list">
-        <li><a href="https://github.com/dan-burk">GitHub <span>dan-burk</span></a></li>
-        <li><a href="https://www.linkedin.com/in/daniel-burkhalter1/">LinkedIn <span>daniel-burkhalter1</span></a></li>
-        <li><a href="https://github.com/dan-burk/sdxc">SD XC code <span>dan-burk/sdxc</span></a></li>
-      </ul>
-    </section>
-    <section class="about">
-      <h2 class="lbl">About</h2>
-      <p>I'm a runner, data scientist, and self-taught developer.</p>
-    </section>
-  </div>
+  <section class="about">
+    <h2 class="lbl">About</h2>
+    <p>I'm a runner, data scientist, and self-taught developer. I grew up in rural western South Dakota, studied math, statistics, and data science at South Dakota State University (SDSU), and ran track and cross country there for six years.</p>
+    <p>I started my career building credit risk models and have since decided to explore the bioinformatics startup life for a while. These apps all point to my passions: running, banking, data, and helping kids.</p>
+  </section>
 
-  <footer>© 2026 Daniel Burkhalter · Last updated Oct 2026</footer>
+  <footer>Last updated Oct 2026</footer>
 </main>
 
 <script>
 // Add a site by adding one object; put its logo in images/logos/.
-// `extra` adds a second small link to a tile, e.g. a mirror.
+// `links` adds small links along the bottom of a tile, e.g. a mirror or source code.
 const PROJECTS = [
   { name:"SD XC", logo:"images/logos/sdxc.png", url:"/sdxc/",
-    desc:"Course-adjusted cross country rankings for South Dakota high schoolers." },
+    desc:"Course-adjusted cross country rankings for South Dakota high school athletes.",
+    links:[["Source code", "https://github.com/dan-burk/sdxc"]] },
   { name:"Math Scribe", logo:"images/logos/math-scribe.png", url:"https://math-scribe-3a4b6.web.app/",
-    desc:"An AI scribe that writes exactly what the student says." },
-  { name:"Bank Check", logo:"images/logos/bank-check.svg", url:"/bank-check/",
-    desc:"See how your bank compares with peers and past failures.",
-    extra:["Mirror site", "https://danielburkhalter.shinyapps.io/bank-check/"] },
+    desc:"An AI scribe that writes exactly what the student says. Built for 8th grade math.",
+    links:[["Source code", "https://github.com/dan-burk/vibe-code/tree/math-scribe"]] },
+  { name:"Bank Check", logo:"images/logos/bank-check.png", url:"/bank-check/",
+    desc:"See how your bank compares with peers and past failures. The app is large and slow to load, so please be patient.",
+    links:[["Mirror site", "https://danielburkhalter.shinyapps.io/bank-check/"],
+           ["Source code", "https://github.com/dan-burk/bank-check"]] },
   { name:"Dairy Translate", logo:"images/logos/dairy-translate.png", url:"https://dairytranslate.com/",
-    desc:"Proof of concept for plain-English Dairy Comp 305 commands." },
+    desc:"Proof of concept for translating English to Dairy Comp 305 code." },
 ];
 
 const esc = s => s.replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
@@ -148,7 +142,8 @@ document.getElementById("grid").innerHTML = PROJECTS.map(p => `
         <span class="arrow" aria-hidden="true">↗</span>
       </div>
       <div><h3><a href="${p.url}" target="_blank" rel="noopener">${esc(p.name)}</a></h3><p>${esc(p.desc)}</p></div>
-      ${p.extra ? `<a class="extra" href="${p.extra[1]}" target="_blank" rel="noopener">${esc(p.extra[0])} ↗</a>` : ""}
+      ${p.links ? `<div class="extras">${p.links.map(([t, u]) =>
+        `<a href="${u}" target="_blank" rel="noopener">${esc(t)} ↗</a>`).join("")}</div>` : ""}
     </div>
   </li>`).join("");
 </script>
