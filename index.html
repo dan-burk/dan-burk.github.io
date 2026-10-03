@@ -39,6 +39,7 @@ a:focus-visible{outline:2px solid var(--ink);outline-offset:3px;border-radius:8p
 /* header */
 .top{display:grid;gap:20px}
 .id{display:flex;align-items:center;gap:20px}
+.avatar{flex:none;width:96px;height:96px;border-radius:50%;object-fit:cover;border:1px solid var(--line);box-shadow:var(--shadow);background:var(--surface)}
 .id h1{margin:0;font:600 30px/1.15 var(--f-sans);letter-spacing:-.02em}
 .tag{margin:0;font-size:18px;line-height:1.5;color:var(--muted);max-width:36em;text-wrap:balance}
 .links{display:flex;flex-wrap:wrap;gap:8px}
@@ -81,6 +82,7 @@ footer{padding-top:24px;border-top:1px solid var(--line);font-size:13px;color:va
   .two{grid-template-columns:1fr;gap:40px}
   .tag{font-size:16.5px}
   .id h1{font-size:25px}
+  .avatar{width:76px;height:76px}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important}.tile:hover{transform:none}}
 </style>
@@ -89,6 +91,7 @@ footer{padding-top:24px;border-top:1px solid var(--line);font-size:13px;color:va
 <main class="wrap">
   <header class="top">
     <div class="id">
+      <img class="avatar" src="images/daniel.jpg" alt="Daniel Burkhalter" width="96" height="96">
       <h1>Daniel Burkhalter</h1>
     </div>
     <p class="tag">Welcome! This is a compilation of my hobby projects. Feel free to poke around.</p>
