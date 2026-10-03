@@ -41,7 +41,6 @@ a:focus-visible{outline:2px solid var(--ink);outline-offset:3px;border-radius:8p
 .id{display:flex;align-items:center;gap:20px}
 .id h1{margin:0;font:600 30px/1.15 var(--f-sans);letter-spacing:-.02em}
 .tag{margin:0;font-size:18px;line-height:1.5;color:var(--muted);max-width:36em;text-wrap:balance}
-.tag b{color:var(--ink);font-weight:500}
 .links{display:flex;flex-wrap:wrap;gap:8px}
 .chip{display:inline-flex;align-items:center;gap:7px;text-decoration:none;font-size:13.5px;font-weight:500;color:var(--muted);padding:6px 12px;border-radius:999px;border:1px solid var(--line);background:var(--surface);transition:color .15s,border-color .15s}
 .chip:hover{color:var(--ink);border-color:var(--faint)}
@@ -72,7 +71,6 @@ a:focus-visible{outline:2px solid var(--ink);outline-offset:3px;border-radius:8p
 .list a span{color:var(--faint);font-size:13px}
 .list a:hover span{color:var(--ink)}
 .about p{margin:0 0 12px;max-width:60ch;color:var(--muted)}
-.about p:first-child{color:var(--ink);font-weight:500}
 
 footer{padding-top:24px;border-top:1px solid var(--line);font-size:13px;color:var(--faint)}
 
@@ -93,7 +91,7 @@ footer{padding-top:24px;border-top:1px solid var(--line);font-size:13px;color:va
     <div class="id">
       <h1>Daniel Burkhalter</h1>
     </div>
-    <p class="tag"><b>Runner, data scientist and hobby developer in South Dakota.</b></p>
+    <p class="tag">Welcome! This is a compilation of my hobby projects. Feel free to poke around.</p>
     <div class="links">
       <a class="chip" href="https://github.com/dan-burk"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0a8 8 0 0 0-2.53 15.59c.4.07.55-.17.55-.38v-1.33c-2.23.48-2.7-1.07-2.7-1.07-.36-.92-.89-1.17-.89-1.17-.73-.5.06-.49.06-.49.8.06 1.23.83 1.23.83.72 1.22 1.87.87 2.33.67.07-.52.28-.87.5-1.07-1.78-.2-3.65-.89-3.65-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.6 7.6 0 0 1 4 0c1.53-1.03 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.66 3.95.29.25.54.73.54 1.48v2.2c0 .21.15.46.55.38A8 8 0 0 0 8 0Z"/></svg>GitHub</a>
       <a class="chip" href="https://www.linkedin.com/in/daniel-burkhalter1/"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M13.6 0H2.4A2.4 2.4 0 0 0 0 2.4v11.2A2.4 2.4 0 0 0 2.4 16h11.2a2.4 2.4 0 0 0 2.4-2.4V2.4A2.4 2.4 0 0 0 13.6 0ZM4.9 13.3H2.7V6.1h2.2v7.2ZM3.8 5.1a1.3 1.3 0 1 1 0-2.6 1.3 1.3 0 0 1 0 2.6Zm9.5 8.2h-2.2V9.8c0-.8 0-1.9-1.2-1.9s-1.3.9-1.3 1.8v3.6H6.4V6.1h2.1v1h.03c.3-.56 1-1.15 2.1-1.15 2.2 0 2.6 1.45 2.6 3.35v4Z"/></svg>LinkedIn</a>
@@ -116,8 +114,7 @@ footer{padding-top:24px;border-top:1px solid var(--line);font-size:13px;color:va
     </section>
     <section class="about">
       <h2 class="lbl">About</h2>
-      <p>Hi, I'm Daniel!</p>
-      <p>I'm a runner, data scientist, and self-taught full-stack (maybe more like a garbage-stack) developer. I ran XC for Bison from 2013–2018, then at SDSU from 2018–2024. Love this sport. Feel free to reach out if you have any questions or see any issues!</p>
+      <p>I'm a runner, data scientist, and self-taught developer.</p>
     </section>
   </div>
 
@@ -128,7 +125,7 @@ footer{padding-top:24px;border-top:1px solid var(--line);font-size:13px;color:va
 // Add a site by adding one object; put its logo in images/logos/.
 // `extra` adds a second small link to a tile, e.g. a mirror.
 const PROJECTS = [
-  { name:"SD XC", logo:"images/logos/sdxc.svg", url:"/sdxc/",
+  { name:"SD XC", logo:"images/logos/sdxc.png", url:"/sdxc/",
     desc:"Course-adjusted cross country rankings for South Dakota high schoolers." },
   { name:"Math Scribe", logo:"images/logos/math-scribe.png", url:"https://math-scribe-3a4b6.web.app/",
     desc:"An AI scribe that writes exactly what the student says." },
@@ -147,8 +144,8 @@ document.getElementById("grid").innerHTML = PROJECTS.map(p => `
         <img class="logo" src="${p.logo}" alt="" width="64" height="64">
         <span class="arrow" aria-hidden="true">↗</span>
       </div>
-      <div><h3><a href="${p.url}">${esc(p.name)}</a></h3><p>${esc(p.desc)}</p></div>
-      ${p.extra ? `<a class="extra" href="${p.extra[1]}">${esc(p.extra[0])} ↗</a>` : ""}
+      <div><h3><a href="${p.url}" target="_blank" rel="noopener">${esc(p.name)}</a></h3><p>${esc(p.desc)}</p></div>
+      ${p.extra ? `<a class="extra" href="${p.extra[1]}" target="_blank" rel="noopener">${esc(p.extra[0])} ↗</a>` : ""}
     </div>
   </li>`).join("");
 </script>
