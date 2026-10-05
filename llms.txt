@@ -9,7 +9,7 @@ Daniel studied math, statistics, and data science at South Dakota State Universi
 - [SD XC](https://danielburkhalter.dev/sdxc/): Course-adjusted cross country rankings for South Dakota high school athletes, plus a race simulator for team scoring.
 - [Math Scribe](https://math-scribe-3a4b6.web.app/): An AI scribe that writes exactly what an 8th grade math student says, without tutoring.
 - [Bank Check](https://danielburkhalter.dev/bank-check/): Compares any FDIC-insured bank with its peers and with every US bank failure since 2000. Mirror: https://danielburkhalter.shinyapps.io/bank-check/
-- [US Coin Value](https://danielburkhalter.dev/coin-value/): Face value vs. metallic value of US coins from daily metal prices, profitable coin swaps, and 1964 wages paid in silver at today's prices.
+- [US Coin Value & Wages](https://danielburkhalter.dev/coin-value/): Face value vs. metallic value of US coins from daily metal prices and profitable coin swaps. [Wages Over Time](https://danielburkhalter.dev/coin-value/wages/) charts US wages since 1964 against 1964 pay carried forward in silver, gold and inflation.
 - [Dairy Translate](https://dairytranslate.com/): Proof of concept for translating English to Dairy Comp 305 code.
 
 ## Profiles
