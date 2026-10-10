@@ -10,6 +10,7 @@ Daniel studied math, statistics, and data science at South Dakota State Universi
 - [Math Scribe](https://math-scribe-3a4b6.web.app/): An AI scribe that writes exactly what an 8th grade math student says, without tutoring.
 - [Bank Check](https://danielburkhalter.dev/bank-check/): Compares any FDIC-insured bank with its peers and with every US bank failure since 2000. Mirror: https://danielburkhalter.shinyapps.io/bank-check/
 - [US Coin Value & Wages](https://danielburkhalter.dev/coin-value/): Face value vs. metallic value of US coins from daily metal prices and profitable coin swaps. [Wages Over Time](https://danielburkhalter.dev/coin-value/wages/) charts US wages since 1964 against 1964 pay carried forward in silver, gold and inflation.
+- [Stocks vs. Metals](https://danielburkhalter.dev/investing/): Monthly prices of the S&P 500, NASDAQ, Dow, gold, silver and copper from Macrotrends, growth since 1927 and 1971, and what $10 a month in each would be worth today from any decade start.
 - [Dairy Translate](https://dairytranslate.com/): Proof of concept for translating English to Dairy Comp 305 code.
 
 ## Profiles
