@@ -15,7 +15,7 @@ Daniel studied math, statistics, and data science at South Dakota State Universi
 
 ## Software
 
-- [Claude GUI](https://danielburkhalter.dev/claude-gui/): Live demo of a lightweight local web page for browsing, searching, resuming and cleaning up Claude Code sessions, plus Codex, Antigravity, and ChatGPT or Claude exports. Install from https://github.com/dan-burk/claude-gui
+- [Claude GUI](https://danielburkhalter.dev/claude-gui/): Live demo of a lightweight local web page for browsing, searching, resuming and cleaning up Claude Code, Codex and Antigravity sessions, plus ChatGPT and Claude exports. Install from https://github.com/dan-burk/claude-gui
 
 ## Profiles
 
