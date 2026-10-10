@@ -13,6 +13,10 @@ Daniel studied math, statistics, and data science at South Dakota State Universi
 - [Stocks vs. Metals](https://danielburkhalter.dev/investing/): How the S&P 500, NASDAQ, Dow, Gold, Silver and Copper have performed since 1971, from Macrotrends monthly prices, and what $10 a month in each would be worth today from any decade start.
 - [Dairy Translate](https://dairytranslate.com/): Proof of concept for translating English to Dairy Comp 305 code.
 
+## Software
+
+- [Claude GUI](https://danielburkhalter.dev/claude-gui/): Live demo of a lightweight local web page for browsing, searching, resuming and cleaning up Claude Code sessions, plus Codex, Antigravity, and ChatGPT or Claude exports. Install from https://github.com/dan-burk/claude-gui
+
 ## Profiles
 
 - [GitHub](https://github.com/dan-burk)
