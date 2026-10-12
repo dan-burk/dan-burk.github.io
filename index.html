@@ -111,6 +111,13 @@ a:focus-visible{outline:2px solid var(--ink);outline-offset:3px;border-radius:8p
 .extras a:hover{color:var(--ink)}
 .tile p{margin:6px 0 0;color:var(--muted);font-size:15px;line-height:1.5}
 
+/* a card with several destinations: only its links are clickable, so it doesn't lift on hover */
+.tile.static:hover{transform:none;box-shadow:none;border-color:var(--line)}
+.static .tile-top{justify-content:flex-start;align-items:center;gap:16px}
+.link-rows{list-style:none;margin:0;padding:0;display:grid;gap:8px;font-size:11px;line-height:1.4}
+.link-rows a{color:var(--muted);text-underline-offset:3px}
+.link-rows a:hover{color:var(--ink)}
+
 /* two one-card sections side by side; columns line up with the two-column grids above */
 .pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
 .pair .grid{grid-template-columns:1fr}
@@ -147,6 +154,7 @@ footer{padding-top:24px;border-top:1px solid var(--line);font-size:13px;color:va
     <div class="links">
       <a class="chip" href="https://github.com/dan-burk"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0a8 8 0 0 0-2.53 15.59c.4.07.55-.17.55-.38v-1.33c-2.23.48-2.7-1.07-2.7-1.07-.36-.92-.89-1.17-.89-1.17-.73-.5.06-.49.06-.49.8.06 1.23.83 1.23.83.72 1.22 1.87.87 2.33.67.07-.52.28-.87.5-1.07-1.78-.2-3.65-.89-3.65-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.6 7.6 0 0 1 4 0c1.53-1.03 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.66 3.95.29.25.54.73.54 1.48v2.2c0 .21.15.46.55.38A8 8 0 0 0 8 0Z"/></svg>GitHub</a>
       <a class="chip" href="https://www.linkedin.com/in/daniel-burkhalter1/"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M13.6 0H2.4A2.4 2.4 0 0 0 0 2.4v11.2A2.4 2.4 0 0 0 2.4 16h11.2a2.4 2.4 0 0 0 2.4-2.4V2.4A2.4 2.4 0 0 0 13.6 0ZM4.9 13.3H2.7V6.1h2.2v7.2ZM3.8 5.1a1.3 1.3 0 1 1 0-2.6 1.3 1.3 0 0 1 0 2.6Zm9.5 8.2h-2.2V9.8c0-.8 0-1.9-1.2-1.9s-1.3.9-1.3 1.8v3.6H6.4V6.1h2.1v1h.03c.3-.56 1-1.15 2.1-1.15 2.2 0 2.6 1.45 2.6 3.35v4Z"/></svg>LinkedIn</a>
+      <a class="chip" href="https://littleburky.wordpress.com/"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M11.7 1.3a1.5 1.5 0 0 1 2.1 0l.9.9a1.5 1.5 0 0 1 0 2.1L6.1 12.9 2.5 14l1.1-3.6 8.1-9.1ZM2 15h12v1H2z"/></svg>Blog</a>
     </div>
   </header>
 
@@ -209,6 +217,25 @@ footer{padding-top:24px;border-top:1px solid var(--line);font-size:13px;color:va
           </div>
           <div><h3><a href="/investing/" target="_blank" rel="noopener">Stocks vs. Metals</a></h3><p>How the S&amp;P 500, NASDAQ, Gold, Silver and Copper have performed since 1971, and what $10 a month in each is worth today.</p></div>
           <div class="extras"><a href="https://github.com/dan-burk/investing" target="_blank" rel="noopener">Source code ↗</a></div>
+        </div>
+      </li>
+      <li>
+        <div class="tile static">
+          <div class="tile-top">
+            <img class="logo" src="images/logos/credit-datasets.svg" alt="Credit Risk Datasets logo" width="64" height="64">
+            <h3>Credit Risk Datasets</h3>
+          </div>
+          <div>
+            <ul class="link-rows">
+              <li><a href="https://www.kaggle.com/competitions/home-credit-default-risk" target="_blank" rel="noopener">Home Credit Default Risk (Kaggle) ↗</a></li>
+              <li><a href="https://bigblue.depaul.edu/jlee141/econdata/LendingClub_LoanData/" target="_blank" rel="noopener">LendingClub Bank Loan Data (DePaul) ↗</a></li>
+              <li><a href="https://www.freddiemac.com/research/datasets/sf-loanlevel-dataset" target="_blank" rel="noopener">Single-Family Loan-Level Dataset (Freddie Mac) ↗</a></li>
+              <li><a href="https://capitalmarkets.fanniemae.com/credit-risk-transfer/single-family-credit-risk-transfer/fannie-mae-single-family-loan-performance-data" target="_blank" rel="noopener">Single-Family Loan Performance Data (Fannie Mae) ↗</a></li>
+              <li><a href="https://data.sba.gov/dataset/7a-504-foia" target="_blank" rel="noopener">7(a) &amp; 504 Loan Data (SBA) ↗</a></li>
+              <li><a href="https://goandgrow.eu/en/public-statistics/" target="_blank" rel="noopener">Loan Dataset (Bondora) ↗</a></li>
+              <li><a href="https://archive.ics.uci.edu/dataset/350/default+of+credit+card+clients" target="_blank" rel="noopener">Default of Credit Card Clients, Taiwan (UCI) ↗</a></li>
+            </ul>
+          </div>
         </div>
       </li>
     </ul>
