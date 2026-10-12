@@ -111,6 +111,10 @@ a:focus-visible{outline:2px solid var(--ink);outline-offset:3px;border-radius:8p
 .extras a:hover{color:var(--ink)}
 .tile p{margin:6px 0 0;color:var(--muted);font-size:15px;line-height:1.5}
 
+/* two one-card sections side by side; columns line up with the two-column grids above */
+.pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.pair .grid{grid-template-columns:1fr}
+
 /* lists */
 .list{list-style:none;margin:0;padding:0;display:grid;gap:10px}
 .list a{display:flex;justify-content:space-between;gap:12px;text-decoration:none;font-size:15px;padding-bottom:10px;border-bottom:1px solid var(--line)}
@@ -127,6 +131,7 @@ footer{padding-top:24px;border-top:1px solid var(--line);font-size:13px;color:va
   .tag{font-size:16.5px}
   .id h1{font-size:25px}
   .avatar{width:76px;height:76px}
+  .pair{grid-template-columns:1fr;gap:48px}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important}.tile:hover{transform:none}}
 </style>
@@ -145,9 +150,9 @@ footer{padding-top:24px;border-top:1px solid var(--line);font-size:13px;color:va
     </div>
   </header>
 
-  <section aria-labelledby="apps-h">
-    <h2 class="lbl" id="apps-h">Apps</h2>
-    <!-- To add an app: copy one <li> block, put its logo in images/logos/,
+  <section aria-labelledby="students-h">
+    <h2 class="lbl" id="students-h">Students</h2>
+    <!-- To add an app: copy one <li> block into the right section, put its logo in images/logos/,
          and add it to sitemap.xml and llms.txt if it lives on this domain. -->
     <ul class="grid">
       <li>
@@ -170,6 +175,12 @@ footer{padding-top:24px;border-top:1px solid var(--line);font-size:13px;color:va
           <div class="extras"><a href="https://github.com/dan-burk/math-scribe" target="_blank" rel="noopener">Source code ↗</a></div>
         </div>
       </li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="finance-h">
+    <h2 class="lbl" id="finance-h">Finance</h2>
+    <ul class="grid">
       <li>
         <div class="tile">
           <div class="tile-top">
@@ -200,34 +211,42 @@ footer{padding-top:24px;border-top:1px solid var(--line);font-size:13px;color:va
           <div class="extras"><a href="https://github.com/dan-burk/investing" target="_blank" rel="noopener">Source code ↗</a></div>
         </div>
       </li>
-      <li>
-        <div class="tile">
-          <div class="tile-top">
-            <img class="logo" src="images/logos/dairy-translate.png" alt="Dairy Translate logo" width="64" height="64">
-            <span class="arrow" aria-hidden="true">↗</span>
-          </div>
-          <div><h3><a href="https://dairytranslate.com/" target="_blank" rel="noopener">Dairy Translate</a></h3><p>Proof of concept for translating English to Dairy Comp 305 code.</p></div>
-        </div>
-      </li>
     </ul>
   </section>
 
-  <section aria-labelledby="software-h">
-    <h2 class="lbl" id="software-h">Software</h2>
-    <!-- Tools you install and run yourself; each card opens a live demo. -->
-    <ul class="grid">
-      <li>
-        <div class="tile">
-          <div class="tile-top">
-            <img class="logo" src="images/logos/claude-gui.svg" alt="Claude GUI logo" width="64" height="64">
-            <span class="arrow" aria-hidden="true">↗</span>
+  <!-- Two one-card sections share a row -->
+  <div class="pair">
+    <section aria-labelledby="software-h">
+      <h2 class="lbl" id="software-h">Software</h2>
+      <!-- Tools you install and run yourself; each card opens a live demo. -->
+      <ul class="grid">
+        <li>
+          <div class="tile">
+            <div class="tile-top">
+              <img class="logo" src="images/logos/claude-gui.svg" alt="Claude GUI logo" width="64" height="64">
+              <span class="arrow" aria-hidden="true">↗</span>
+            </div>
+            <div><h3><a href="/claude-gui/" target="_blank" rel="noopener">Claude GUI</a></h3><p>Browse, search, resume and clean up your Claude Code, Codex and Antigravity sessions, plus ChatGPT and Claude exports, in one local web page. Try the demo, then install it from GitHub.</p></div>
+            <div class="extras"><a href="https://github.com/dan-burk/claude-gui" target="_blank" rel="noopener">Source code ↗</a></div>
           </div>
-          <div><h3><a href="/claude-gui/" target="_blank" rel="noopener">Claude GUI</a></h3><p>Browse, search, resume and clean up your Claude Code, Codex and Antigravity sessions, plus ChatGPT and Claude exports, in one local web page. Try the demo, then install it from GitHub.</p></div>
-          <div class="extras"><a href="https://github.com/dan-burk/claude-gui" target="_blank" rel="noopener">Source code ↗</a></div>
-        </div>
-      </li>
-    </ul>
-  </section>
+        </li>
+      </ul>
+    </section>
+    <section aria-labelledby="ag-h">
+      <h2 class="lbl" id="ag-h">Agriculture</h2>
+      <ul class="grid">
+        <li>
+          <div class="tile">
+            <div class="tile-top">
+              <img class="logo" src="images/logos/dairy-translate.png" alt="Dairy Translate logo" width="64" height="64">
+              <span class="arrow" aria-hidden="true">↗</span>
+            </div>
+            <div><h3><a href="https://dairytranslate.com/" target="_blank" rel="noopener">Dairy Translate</a></h3><p>Proof of concept for translating English to Dairy Comp 305 code.</p></div>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </div>
 
   <section class="about">
     <h2 class="lbl">About</h2>
