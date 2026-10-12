@@ -98,7 +98,8 @@ a:focus-visible{outline:2px solid var(--ink);outline-offset:3px;border-radius:8p
 .grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
 .tile{position:relative;height:100%;min-height:210px;display:flex;flex-direction:column;gap:18px;padding:28px;border-radius:18px;background:var(--surface);border:1px solid var(--line);text-decoration:none;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
 .tile:hover{transform:translateY(-2px);box-shadow:var(--shadow);border-color:#D4D4DA}
-.tile-top{display:flex;align-items:flex-start;justify-content:space-between}
+.tile-top{display:flex;align-items:center;gap:16px}
+.tile-top .arrow{margin-left:auto;align-self:flex-start}
 .logo{width:64px;height:64px;border-radius:15px;display:block;flex:none;object-fit:contain}
 .arrow{color:var(--faint);font-size:18px;line-height:1;transition:transform .2s ease,color .2s ease}
 .tile:hover .arrow{transform:translate(2px,-2px);color:var(--ink)}
@@ -109,11 +110,10 @@ a:focus-visible{outline:2px solid var(--ink);outline-offset:3px;border-radius:8p
 .extras a{font-size:13px;color:var(--faint);text-underline-offset:3px}
 .extras a:only-child{margin-left:auto}
 .extras a:hover{color:var(--ink)}
-.tile p{margin:6px 0 0;color:var(--muted);font-size:15px;line-height:1.5}
+.tile p{margin:0;color:var(--muted);font-size:15px;line-height:1.5}
 
 /* a card with several destinations: only its links are clickable, so it doesn't lift on hover */
 .tile.static:hover{transform:none;box-shadow:none;border-color:var(--line)}
-.static .tile-top{justify-content:flex-start;align-items:center;gap:16px}
 .link-rows{list-style:none;margin:0;padding:0;display:grid;gap:8px;font-size:11px;line-height:1.4}
 .link-rows a{color:var(--muted);text-underline-offset:3px}
 .link-rows a:hover{color:var(--ink)}
@@ -167,9 +167,10 @@ footer{padding-top:24px;border-top:1px solid var(--line);font-size:13px;color:va
         <div class="tile">
           <div class="tile-top">
             <img class="logo" src="images/logos/sdxc.png" alt="SD XC logo" width="64" height="64">
+            <h3><a href="/sdxc/" target="_blank" rel="noopener">SD XC</a></h3>
             <span class="arrow" aria-hidden="true">↗</span>
           </div>
-          <div><h3><a href="/sdxc/" target="_blank" rel="noopener">SD XC</a></h3><p>Course-adjusted cross country rankings for South Dakota high school athletes.</p></div>
+          <div><p>Course-adjusted cross country rankings for South Dakota high school athletes.</p></div>
           <div class="extras"><a href="https://github.com/dan-burk/sdxc" target="_blank" rel="noopener">Source code ↗</a></div>
         </div>
       </li>
@@ -177,9 +178,10 @@ footer{padding-top:24px;border-top:1px solid var(--line);font-size:13px;color:va
         <div class="tile">
           <div class="tile-top">
             <img class="logo" src="images/logos/math-scribe.png" alt="Math Scribe logo" width="64" height="64">
+            <h3><a href="/math-scribe/" target="_blank" rel="noopener">Math Scribe</a></h3>
             <span class="arrow" aria-hidden="true">↗</span>
           </div>
-          <div><h3><a href="/math-scribe/" target="_blank" rel="noopener">Math Scribe</a></h3><p>An AI scribe that writes exactly what the student says. Built for 8th grade math.</p></div>
+          <div><p>An AI scribe that writes exactly what the student says. Built for 8th grade math.</p></div>
           <div class="extras"><a href="https://github.com/dan-burk/math-scribe" target="_blank" rel="noopener">Source code ↗</a></div>
         </div>
       </li>
@@ -193,9 +195,10 @@ footer{padding-top:24px;border-top:1px solid var(--line);font-size:13px;color:va
         <div class="tile">
           <div class="tile-top">
             <img class="logo" src="images/logos/bank-check.png" alt="Bank Check logo" width="64" height="64">
+            <h3><a href="/bank-check/" target="_blank" rel="noopener">Bank Check</a></h3>
             <span class="arrow" aria-hidden="true">↗</span>
           </div>
-          <div><h3><a href="/bank-check/" target="_blank" rel="noopener">Bank Check</a></h3><p>See how your bank compares with peers and past failures. The app is large and slow to load, so please be patient.</p></div>
+          <div><p>See how your bank compares with peers and past failures. The app is large and slow to load, so please be patient.</p></div>
           <div class="extras"><a href="https://danielburkhalter.shinyapps.io/bank-check/" target="_blank" rel="noopener">Mirror site ↗</a><a href="https://github.com/dan-burk/bank-check" target="_blank" rel="noopener">Source code ↗</a></div>
         </div>
       </li>
@@ -203,9 +206,10 @@ footer{padding-top:24px;border-top:1px solid var(--line);font-size:13px;color:va
         <div class="tile">
           <div class="tile-top">
             <img class="logo" src="images/logos/coin-value.png" alt="US Coin Value & Wages logo" width="64" height="64">
+            <h3><a href="/coin-value/" target="_blank" rel="noopener">US Coin Value &amp; Wages</a></h3>
             <span class="arrow" aria-hidden="true">↗</span>
           </div>
-          <div><h3><a href="/coin-value/" target="_blank" rel="noopener">US Coin Value &amp; Wages</a></h3><p>What US coins are worth in metal, and what 1964 wages would be worth today in silver, gold and inflation.</p></div>
+          <div><p>What US coins are worth in metal, and what 1964 wages would be worth today in silver, gold and inflation.</p></div>
           <div class="extras"><a href="https://github.com/dan-burk/coin-value" target="_blank" rel="noopener">Source code ↗</a></div>
         </div>
       </li>
@@ -213,9 +217,10 @@ footer{padding-top:24px;border-top:1px solid var(--line);font-size:13px;color:va
         <div class="tile">
           <div class="tile-top">
             <img class="logo" src="images/logos/investing.svg" alt="Stocks vs. Metals logo" width="64" height="64">
+            <h3><a href="/investing/" target="_blank" rel="noopener">Stocks vs. Metals</a></h3>
             <span class="arrow" aria-hidden="true">↗</span>
           </div>
-          <div><h3><a href="/investing/" target="_blank" rel="noopener">Stocks vs. Metals</a></h3><p>How the S&amp;P 500, NASDAQ, Gold, Silver and Copper have performed since 1971, and what $10 a month in each is worth today.</p></div>
+          <div><p>How the S&amp;P 500, NASDAQ, Gold, Silver and Copper have performed since 1971, and what $10 a month in each is worth today.</p></div>
           <div class="extras"><a href="https://github.com/dan-burk/investing" target="_blank" rel="noopener">Source code ↗</a></div>
         </div>
       </li>
@@ -251,9 +256,10 @@ footer{padding-top:24px;border-top:1px solid var(--line);font-size:13px;color:va
           <div class="tile">
             <div class="tile-top">
               <img class="logo" src="images/logos/claude-gui.svg" alt="Claude GUI logo" width="64" height="64">
+              <h3><a href="/claude-gui/" target="_blank" rel="noopener">Claude GUI</a></h3>
               <span class="arrow" aria-hidden="true">↗</span>
             </div>
-            <div><h3><a href="/claude-gui/" target="_blank" rel="noopener">Claude GUI</a></h3><p>Browse, search, resume and clean up your Claude Code, Codex and Antigravity sessions, plus ChatGPT and Claude exports, in one local web page. Try the demo, then install it from GitHub.</p></div>
+            <div><p>Browse, search, resume and clean up your Claude Code, Codex and Antigravity sessions, plus ChatGPT and Claude exports, in one local web page. Try the demo, then install it from GitHub.</p></div>
             <div class="extras"><a href="https://github.com/dan-burk/claude-gui" target="_blank" rel="noopener">Source code ↗</a></div>
           </div>
         </li>
@@ -266,9 +272,10 @@ footer{padding-top:24px;border-top:1px solid var(--line);font-size:13px;color:va
           <div class="tile">
             <div class="tile-top">
               <img class="logo" src="images/logos/dairy-translate.png" alt="Dairy Translate logo" width="64" height="64">
+              <h3><a href="https://dairytranslate.com/" target="_blank" rel="noopener">Dairy Translate</a></h3>
               <span class="arrow" aria-hidden="true">↗</span>
             </div>
-            <div><h3><a href="https://dairytranslate.com/" target="_blank" rel="noopener">Dairy Translate</a></h3><p>Proof of concept for translating English to Dairy Comp 305 code.</p></div>
+            <div><p>Proof of concept for translating English to Dairy Comp 305 code.</p></div>
           </div>
         </li>
       </ul>
